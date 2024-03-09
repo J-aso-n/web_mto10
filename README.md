@@ -29,6 +29,6 @@ templates文件夹：
 
 ![image-20240309120254111](https://github.com/J-aso-n/web_mto10/blob/master/README_pic/3.png)
 
-
+运行：py app.py
 
 ​		
