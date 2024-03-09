@@ -477,9 +477,9 @@ var ifcon=function() {//判断能不能继续合成
 	return 1;
 }
 
-void fresh=function(){
+// void fresh=function(){
 
-}
+// }
 
 
 var reachgoal=function(){//达到合成目标
