@@ -3,7 +3,7 @@
 
 搭建在web端的mto10小游戏
 
-![2](C:\Users\郭嘉\Desktop\2.png)
+![2](https://github.com/J-aso-n/web_mto10/blob/master/README_pic/2.png)
 
 ![image](https://github.com/J-aso-n/web_mto10/blob/master/README_pic/1.png)
 
@@ -27,7 +27,7 @@ templates文件夹：
 
 后端：app.py：flask框架后端，注意数据库部分要替换成自己的本地数据库
 
-![image-20240309120254111](C:\Users\郭嘉\AppData\Roaming\Typora\typora-user-images\image-20240309120254111.png)
+![image-20240309120254111](https://github.com/J-aso-n/web_mto10/blob/master/README_pic/3.png)
 
 
 
