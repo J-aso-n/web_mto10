@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewpoint' content='width=device-width,initial-scale=1'>
+    
+    <title>合成十移植</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/合成十.css') }}">
+</head>
+<body onselectstart="return false;" ><!--设置双击无效果-->
+    <div id="full">
+        <h1>&nbsp&nbsp&nbsp&nbsp合成十网页移植</h1>
+        <h3>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp使用鼠标和方向键控制,左键单击和回车键选定并合成,使用 v 来控制滚动条。</h3>
+        <div style='width:600px;height:30px;border:transparent;margin: auto;' ><!--下移20px 居中 用一个div框住两个选择钮--><!---->
+            <select id='width'><!--合成十宽度-->
+                <option value='0'>--请选择宽--</option>
+                <option value='5'>宽5</option>
+                <option value='6'>宽6</option>
+                <option value='7'>宽7</option>
+                <option value='8'>宽8</option>
+                <option value='9'>宽9</option>
+                <option value='10'>宽10</option>
+            </select>
+            <select id='height'><!--合成十高度-->
+                <option value='0'>--请选择高--</option>
+                <option value='5'>高5</option>
+                <option value='6'>高6</option>
+                <option value='7'>高7</option>
+                <option value='8'>高8</option>
+            </select>
+            <select id='goal'><!--合成十目标-->
+                <option value='10'>--请选择合成目标--</option>
+                <option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option>
+                <option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option>
+                <option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option>
+                <option value='19'>19</option><option value='20'>20</option>
+            </select>
+            <button id="scroll">释放滚动条</button>
+            <button id="tip">提示</button>
+            <button id='start'>开始游戏</button>
+            <div id="score"></div>
+        </div>
+        <div id='gameboard'> </div>
+    </div>
+    <table id="rank">
+        <caption>排行榜</caption>
+        <tr>
+            <td>排名</td><td>用户名</td><td>最终得分</td>
+        </tr>
+        <script type="text/javascript">
+            namearray=[]
+            materialarray=[]
+        </script>
+        {% for data in user %}
+            <script type="text/javascript">
+                namearray.push('{{data[0]}}');
+                materialarray.push('{{data[2]}}');
+            </script>
+        {% endfor %}
+        <script type="text/javascript">
+            for (var i = 1; i <= {{order}}; i++) {
+                document.write("<tr>-->"+"<td>" + i + "</td>" +"<td>"+ namearray[i-1] + "</td>"+"<td>"+ materialarray[i-1] + "</td>"+"</tr>-->");
+            }
+        </script>
+
+    </table>
+
+    <canvas id="canvas"></canvas>
+    <script type='text/javascript' src="{{ url_for('static', filename='/js/script.js') }}"></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='/js/dynamic.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+</body>
+</html>

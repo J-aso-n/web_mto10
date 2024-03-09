@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
+<title>用户注册</title>
+<script type="text/javascript" language="javascript">
+
+function Check(f)
+{
+	var number=document.getElementById("textNnumber");
+	if(number.value=="")
+	{
+		alert("please input your student number");
+		number.focus();
+		return false;
+	}
+	var name=document.getElementById("textName");
+	if(name.value=="")
+	{
+		alert("please input your name!");
+		name.focus();
+		return false;
+	}
+	var password1=document.getElementById("password1");
+	if(password1.value.length<=0)
+	{
+		alert("please input your password!");
+		password1.focus();
+		return false;
+	}
+	if(password1.value.length<6)
+	{
+		alert("password lenth is not enough!");
+		password1.focus();
+		return false;
+	}
+	var password2=document.getElementById("password2");
+	if(password2.value!=password1.value)
+	{
+		alert("Password must be consistent !");
+		password2.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+
+</head>
+<body>
+<div class="content">
+<div class="head">
+  <div class="head_1">
+    <div class="top">
+      <div class="top_logo"><img src="{{ url_for('static', filename='/pic/logo.jpg') }}" /></div>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a  href="login.html">登录</a></li>
+        <li>|</li>
+        <li><a  href="register.html">注册</a></li>
+      </ul>
+    </div>
+
+</div>
+<center>
+<div class="contact" >
+<form onsubmit="return Check(this);" id="form1" enctype="multipart/form-data" method="post" action="/register">
+		<ul>
+				<li>
+					<label>用户名：</label>
+					<input type="text" name="username" id="username" placeholder="请输入用户名"/><span class="tips" id="divname">长度1~12个字符</span>
+				</li>
+				<li>
+					<label>密码：</label>
+					<input type="password" name="password1" id="password1" placeholder="请输入你的密码"/><span class="tips" id="divpassword1">密码不能少于6位</span>
+				</li>
+				<li>
+					<label>确认密码：</label>
+					<input type="password" name="password2" id="password2" placeholder="请再次输入你的密码"/><span class="tips" id="divpassword2">两次密码需要相同</span>
+				</li>
+				<li>
+				<input class="btnclass" type="submit" name="button1" id="button1" value="提交" />
+				</li>
+				<li>
+				<input class="btnclass" type="reset" name="button2" id="button2" value="重置" />
+				</li>
+			</ul>
+</form>
+</div>
+</center>
+</div>
+</body>
+</html>

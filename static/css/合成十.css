@@ -1,0 +1,104 @@
+
+body{
+    overflow-y: hidden;
+    text-align: center;
+    background: url(../pic/ocean.jpg) no-repeat;
+    background-size: 100%,130%;
+    background-attachment: fixed;
+}
+div{
+    margin-left: 22px;
+    margin-top: 23px;
+    position: relative;
+}
+h1,h3{
+    color: white;
+}
+#full{
+    margin-left: 50%;
+    transform: translate(-50%);/*平移50%，然后自身平移-50%，达到居中效果*/
+    position:absolute;
+}
+#gameboard{
+    margin: auto;
+    margin-top: 40px;
+}
+#gameboard div{
+    width: 66px;
+    height: 69px;
+    border:1px solid;
+    outline:4px double rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    outline-offset:-10px;
+    font-size:25px;
+    text-align:center;
+    line-height:69px;/*设置文字居中*/
+    float: left;
+}
+#score{
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 500px;
+    height: 20px;
+    color: white;
+}
+#rank{
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(230, 189, 189);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(230, 189, 189);
+    color: white;
+
+    left: 3%;
+    top: 30%;
+    position:absolute;
+}
+td{
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(230, 189, 189);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(230, 189, 189);
+}
+td:hover{
+    background-color:white;
+    color: black;
+    font-size: large;
+    border-radius:10px;
+    transition:1s;
+}
+
+#rank {
+  --borderWidth: 3px;
+  border-radius: var(--borderWidth);
+}
+#rank:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>mto10注册</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/login.css') }}">
+    <script type="text/javascript" language="javascript">
+
+</script>
+</head>
+<body>
+<div class="login-box" id="demo">
+    <form action="" method="post" onsubmit="return foo();" name="myform" >
+        <div id="login_box">
+            <h2>REGISTER</h2>
+            <div id="input_box">
+                <input type="text" name="username" placeholder="请输入注册账号">
+            </div>
+            <div class="input_box">
+                <input type="password" name="password1" placeholder="请输入密码">
+            </div>
+            <div class="input_box">
+                <input type="password" name="password2" placeholder="请再次输入密码">
+            </div>
+            <button onclick="ffun()">注册</button><br>
+        </div>
+    </form>
+    <canvas id="canvas"></canvas> 
+</div>
+<script src="{{ url_for('static', filename='/js/login.js') }}"></script>
+ 
+</body>
+</html>

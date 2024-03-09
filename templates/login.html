@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>mto10登录</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/login.css') }}">
+</head>
+<body>
+<div class="login-box" id="demo">
+    <form action="/login" method="post" name="myform" >
+        <div id="login_box">
+            <h2>LOGIN</h2>
+            <div id="input_box">
+                <input type="text" name="username" placeholder="请输入用户名">
+            </div>
+            <div class="input_box">
+                <input type="password" name="password" placeholder="请输入密码">
+            </div>
+            <p><button type="submit" name="Submit" value="登录">登录</button></p>
+            <p><button type="submit" name="Submit" value="注册">注册</button></p>
+        </div>
+    </form>
+    <canvas id="canvas"></canvas> 
+</div>
+<script src="{{ url_for('static', filename='/js/login.js') }}"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask_test</title>
+</head>
+<body>
+    用户{{ username }},欢迎光临<br/>
+
+    排行榜:<br/>        <!--了解一下如何在页面打印表格，以及如何迭代-->
+        <table border="10">
+            <tr>
+                <td>用户名</td><td>最终得分</td>
+            </tr>
+            {% for data in user %}
+            <tr>
+                <td>{{ data[0] }}</td><td>{{ data[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+</body>
+</html>
