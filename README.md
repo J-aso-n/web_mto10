@@ -5,7 +5,7 @@
 
 ![2](C:\Users\郭嘉\Desktop\2.png)
 
-![1](C:\Users\郭嘉\Desktop\1.png)
+![image](https://github.com/J-aso-n/web_mto10/blob/master/README_pic/1.png)
 
 前端部分：
 
